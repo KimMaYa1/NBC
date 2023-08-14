@@ -1,6 +1,12 @@
 # 내일배움캠프 1일차 TIL | C# 기초 사용문법, 배열과 메서드
 
- <htr>https://files.slack.com/files-tmb/T043597JK8V-F05MNACL2US-7b14ccec33/image_720.png
+ 
+
+ <htr>https://github.com/KimMaYa1/week1
+ 
+ - 오늘 공부한것들이야
+
+
 
 ## 느낀점
 
