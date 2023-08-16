@@ -19,7 +19,7 @@
  - [접근 제한자] [데이터 타입] [변수명] {get{} set{}}
     - 프로퍼티인데 다른 클래스에서 변수값을 가져갈때 get을 사용 다른 클래스에서 값을 지정할때 set을 사용해
         - 예시
-        '''cs
+        '''
         private string name;
         private int age;
 
