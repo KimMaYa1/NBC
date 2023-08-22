@@ -1,4 +1,4 @@
-# 내일배움캠프 3일차 TIL | C# 알고리즘, 스택, 큐
+# 내일배움캠프 4일차 TIL | C# 알고리즘, 스택, 큐
 
 ![image_720](https://github.com/KimMaYa1/NBC/assets/141565207/e84deae9-27a9-4728-a617-7bc512f9d10b)
 
