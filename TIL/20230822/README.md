@@ -15,22 +15,22 @@
 - Sort
 
   ```
-if ( num == 1)
- {
+  if ( num == 1)
+  {
      Array.Sort(items, delegate (Item item1, Item item2)             //긴 문자가 위로
      {
          return item2.itemName.Replace(" ", "").Length.CompareTo(item1.itemName.Replace(" ", "").Length);    //Replace로 공백을 제거
      });
- }
- else if( num == 2)
- {
+  }
+  else if( num == 2)
+  {
      Array.Sort(items, delegate (Item item1, Item item2)             //장착한 장비가 위로
      {
          return item2.mountingStatus.CompareTo(item1.mountingStatus);
      });
- }
- else
- {
+  }
+  else
+  {
      Array.Sort(items, delegate (Item item1, Item item2)             //능력치가 높은 순서로
      {
          return item2.itemPerformance.CompareTo(item1.itemPerformance);
@@ -58,7 +58,7 @@ if ( num == 1)
              return 1;
          });
      }
- }
+  }
   
 
   ```
