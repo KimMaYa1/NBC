@@ -85,6 +85,18 @@
     ```
    - 만약 0을 입력하지 않으면 true를 반환하기떄문에 메인문에서 다시 while문을 들어가기때문에 Abcd()메서드가 다시 실행된다
 
+ - 배열의 추가나 삭제
+    ```
+    public void StoreItemAdd(Item item)
+    {
+        Array.Resize(ref items, items.Length + 1);          //items 배열의 정보는 유지하면서 배열의 크기 1증가시켜준다
+        item.mountingStatus = false;
+        items[items.Length - 1] = item;
+    }
+    ```
+   - 배열의 크기를 추가하려고 new Item[숫자]를 한다면 기존에 있던 정보를 날리기에 ref를 사용하여 items배열을 참조해 items길이에 + 1 만큼 해서 다시 배열길이을 지정해주어서
+     안에 정보를 그대로 두고 길이를 1 추가하여 새로운 아이템을 마지막 배열에 추가하게 된다
+
 ## 개인 과제를 진행하면서 느낀점
 
  - 처음 구조를 짤때 확장성보다는 그때그때 문제를 해결해 나가려고만 코드를 짜다보니 나중에 새로운 정보를 입력할때 고칠게 많았다
