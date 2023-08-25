@@ -57,6 +57,44 @@
     ```
   - C# 6.0 부터 사용가능한 문법 Format()방법과 달리 {}안에 직접 변수를 넣는다 (시간이 살짝 더 걸리는거 같다)
 
- ## TIL을 마치며
+## 어려웠던 알고리즘
+
+- 색종이
+  ```
+  nt arr = int.Parse(Console.ReadLine());
+  int area = 0;
+  int[,] pan = new int[100,100];
+  int x, y;
+
+  for(int i = 0; i < arr; i++)
+  {
+      string[] str = Console.ReadLine().Split();
+      x = int.Parse(str[0]);
+      y = int.Parse(str[1]);
+      for(int j = 0; j < 10; j++)
+      {
+        for(int z = 0; z < 10; z++)
+        {
+          ㅔan[x + j, y + z] = 1;
+        }
+      }
+  }
+
+  for(int i = 0; i < pan.GetLength(0); i++)
+  {
+    for(int j = 0; j< pan.GetLength(1); j++)
+    {
+      if(pan[i,j] == 1)
+      {
+        area++;
+      }
+    }
+  }
+  Console.WriteLine(area);
+  ```
+ - 색종이 문제를 풀어내면서 문자열의 길이를 얻어내는 방법과 가변형 문자의 선언과 초기화 방법을 알게되었다
+   크게 문제될건 없었지만 처음에 for문의 3개나 써야하는건가 싶어서 망설임이 있었지만 다른 방법이 떠오르지 않아 3중for문으로 작성했다
+
+## TIL을 마치며
 
  - 
