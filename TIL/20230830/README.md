@@ -1,4 +1,4 @@
-# 내일배움캠프 11일차 TIL | C# 팀과제
+# 내일배움캠프 11일차 TIL | C# 팀과제 - 콘솔꾸미기
 
 ![image_720](https://github.com/KimMaYa1/NBC/assets/141565207/e84deae9-27a9-4728-a617-7bc512f9d10b)
 
