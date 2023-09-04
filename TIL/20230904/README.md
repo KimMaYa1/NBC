@@ -68,7 +68,9 @@ public void OnLook(InputValue value)
 }
   ```
 - 위 코드에서 내 마우스의 월드좌표를 받아와 나의 좌표의 거리를 계산해 1로 계산해주는 메서드이다
-
+- magnitude는 newAim의 백터를 길이로 반환해줍니다
+- - - 
+- - -
 
   ```
   private void RotateArm(Vector2 direction)
@@ -80,8 +82,13 @@ public void OnLook(InputValue value)
     armPivot.rotation = Quaternion.Euler(0, 0, rotZ);
   }
   ```
+-flip은 스프라이트를 뒤집어준다
+
 - rotZ가 오일러각도인데 이유가 Atan2 를 사용하여 x y 를 입력해주었다면 0에서 3.14값이 나오고 뒤에 Rad2Deg(1라디안)를 곱하면 0도에서 180도로 만들어줄수있다
 
 - 라디안 값이란 각도 파이(ㅠ)값에 라디안을 곱하면 180이나오게된다 인데 호의 길이가 반지름의 길이가 같다면 1라디안이라고 말한다
 ![Alt text](image-1.png)
 - 디그리는 평상시에 활용되는 각도로 0도에서 360도로 표현하는 값이다
+- - -
+- - -
+
