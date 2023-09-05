@@ -91,4 +91,3 @@ public void OnLook(InputValue value)
 - 디그리는 평상시에 활용되는 각도로 0도에서 360도로 표현하는 값이다
 - - -
 - - -
-
