@@ -102,43 +102,29 @@ void Update()
 
 void OnTriggerEnter2D(Collider2D other)
 {
-    if (other.gameObject.tag == "BadBug")
-    {
-        if (!_isStun)
-        {
-            GetComponent<PlayerInput>().enabled = false;
-            _isStun = true;
-        }
-    }
-    else if(other.gameObject.tag == "FixBug")
-    {
+    switch (other.gameObject.tag)
+{
+    case "BadBug":
+        GetComponent<PlayerInput>().enabled = false;
+        _isStun = true;
+        break;
+    case "FixBug":
         Score++;
-    }
-    else if(other.gameObject.tag == "Battery")
-    {
-        Debug.Log("Battery");
-    }
-    else if (other.gameObject.tag == "ChatGpt")
-    {
-        Debug.Log("ChatGpt");
-    }
-    else if (other.gameObject.tag == "CPU")
-    {
-        Debug.Log("CPU");
-    }
-    else if (other.gameObject.tag == "Insecticide")
-    {
-        Debug.Log("Insecticide");
-    }
-    else if (other.gameObject.tag == "NullImage")
-    {
-        Debug.Log("NullImage");
-    }
-    else if(other.gameObject.tag == "KillObject")
-    {
-        Debug.Log("KillObject");
+        break;
+    case "Battery":
+        break;
+    case "ChatGpt":
+        break;
+    case "CPU":
+        break;
+    case "Insecticide":
+        break;
+    case "NullImage":
+        break;
+    case "KillObject":
         IsDead = true;
-    }
+        break;
+}
     other.gameObject.SetActive(false);
 }
 
@@ -148,7 +134,7 @@ private void OutStun()
     _isStun = false;
 }
   ```
-- 저번에 개발하였던 플레이어 컨트롤러 메서드에 각 태그에 맞게 상호작용을 진행하였고 스턴의 중복을 방지하기 위해 _isStun을 사용하였습니다.
+- 저번에 개발하였던 플레이어 컨트롤러 메서드에 각 태그에 맞게 상호작용을 진행하였고 스턴의 중복은 타임은 계속해서 증가해서 중복되지 않습니다
 - 스턴 자체는 PlayerInput을 비활성화 시키는것으로 제어하였습니다.
 
 ### 향후 개발
