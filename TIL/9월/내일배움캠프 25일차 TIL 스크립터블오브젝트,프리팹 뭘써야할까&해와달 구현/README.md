@@ -1,4 +1,4 @@
-# 내일배움캠프 25일차 TIL |  스크립터블오브젝트,프리팹 뭘 써야할까?
+# 내일배움캠프 25일차 TIL |  스크립터블오브젝트,프리팹 뭘 써야할까? & 해와달구현
 
 ![image_720](https://github.com/KimMaYa1/NBC/assets/141565207/e84deae9-27a9-4728-a617-7bc512f9d10b)
 
@@ -91,7 +91,7 @@
   ```
 - RenderSettings을 환경광과 반사광값에 애니메이션 커브값을 주어서 빛을 강하고 약하게 준다
 
-### 해와 달의 시간별 각도 조절
+### 해와 달의 시간별 구현 & 각도 조절
 
   ```
   lightSource.transform.eulerAngles = (time - (lightSource == sun ? 0.25f : 0.75f)) * noon * 4.0f;
