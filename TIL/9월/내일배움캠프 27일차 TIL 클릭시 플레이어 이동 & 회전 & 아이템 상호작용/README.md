@@ -1,4 +1,4 @@
-# 내일배움캠프 27일차 TIL |  클릭시 플레이어 이동 & 회전
+# 내일배움캠프 27일차 TIL |  클릭시 플레이어 이동 & 회전 & 아이템 상호작용
 
 ![image_720](https://github.com/KimMaYa1/NBC/assets/141565207/e84deae9-27a9-4728-a617-7bc512f9d10b)
 
