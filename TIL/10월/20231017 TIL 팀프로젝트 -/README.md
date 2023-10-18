@@ -7,15 +7,62 @@
 
 ## 오늘 한 일
 
-### 
-<details>
-<summary>코드</summary>
+### 사운드 매니저
 
 <details>
 <summary>코드</summary>
 
   ```C#
- 
+ using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class SoundManager : MonoBehaviour
+{
+    public static SoundManager Instance;
+
+    public BGM BackMusic;
+    public EM EffactMusic;
+
+    private AudioSource BGM;
+    private AudioSource EM;
+
+    [Range(0f, 1f)] private static float MasterVolume = 1;
+    [Range(0f, 1f)] private static float MusicVolume = 1;
+    [Range(0f, 1f)] private static float EffactVolume = 1;
+
+    private void Awake()
+    {
+        Instance = this;
+
+        BGM = BackMusic.GetComponent<AudioSource>();
+        EM = EffactMusic.GetComponent<AudioSource>();
+
+        BGM.volume = MasterVolume * MusicVolume;
+        EM.volume = MasterVolume * EffactVolume;
+    }
+
+    public void SetAudioSetting(float master, float music, float efffact)
+    {
+        MasterVolume = master;
+        MusicVolume = music;
+        EffactVolume = efffact;
+
+        BGM.volume = MasterVolume * MusicVolume;
+        EM.volume = MasterVolume * EffactVolume;
+    }
+
+    //0번 마스터볼륨 1번 뮤직볼륨 2번 이펙트볼륨
+    public float[] GetAudioSetting()
+    {
+        return new float[] { MasterVolume, MusicVolume, EffactVolume };
+    }
+}
+
   ```
 </details>
 
+- 환경설정에서 설정한 데이터들을 저장하여 가지고 있다가 씬이 넘어가도 소리가 유지될수있도록 관리해주는 사운드 매니저이다.
+- 사실 사운드 매니저는 씬을 옮겨도 사라지지 않게 할수있지만 게임씬에서만 사용하는 게임매니저와 스타트씬과 게임씬에서 다른 UI매니저가 있어서 다시 선언하는것으로 하였다.
+- 다음에는 각 매니저들을 씬에서 필요에 따라 불러올수있도록 바꾸고싶다.
