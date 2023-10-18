@@ -1,4 +1,4 @@
-# 2023.10.17 TIL | 팀프로젝트 - 
+# 2023.10.17 TIL | 팀프로젝트 - 환경설정을 바꿔도 유지되도록!
 
 [팀프로젝트](https://github.com/tjdgh7419/Chapter3-3_B07_Project)
 
